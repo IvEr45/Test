@@ -21,7 +21,7 @@ class TaskController extends Controller
     $task->description = $request->description;
     $task->save();
 
-    return redirect('/tasks')->with('success', 'Task added successfully!');
+    return redirect()->to('/tasks')->with('success', 'Task added successfully!');
 }
 
 public function update(Request $request, $id)
@@ -41,4 +41,5 @@ public function destroy($id)
 
     return redirect('/tasks')->with('success', 'Task deleted successfully!');
 }
+
 }
