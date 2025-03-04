@@ -21,3 +21,24 @@ Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+<<<<<<< HEAD
+=======
+
+
+use App\Models\Task;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\TaskController;
+
+// READ - View all tasks
+Route::get('/tasks', [TaskController::class, 'index']);
+
+// CREATE - Add a new task
+Route::post('/tasks', [TaskController::class, 'store']);
+
+// UPDATE - Edit an existing task
+Route::put('/tasks/{id}', [TaskController::class, 'update']);
+
+// DELETE - Remove a task
+Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
+>>>>>>> 124f499 (Added Tailwind CSS)
